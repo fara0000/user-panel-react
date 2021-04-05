@@ -2,13 +2,13 @@ import React, {
     FC,
     memo,
 } from 'react';
-import { Wrapper } from './styledComponents';
+import { Wrapper } from './styledComponent';
 
 export interface Props {
     title: string;
 }
 
-const MainHeader: FC<Props> = props => {
+const CustomMainHeader: FC<Props> = props => {
     const {
         title,
     } = props;
@@ -26,4 +26,4 @@ const MainHeader: FC<Props> = props => {
     );
 };
 
-export default memo(MainHeader);
+export default memo(CustomMainHeader);

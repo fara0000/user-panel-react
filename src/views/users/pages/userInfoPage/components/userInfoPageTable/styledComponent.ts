@@ -5,13 +5,9 @@ interface Types extends StyledComponentBase<any, {}> {
     title?: any;
 }
 
-export const Wrapper:Types = styled.div`
+export const Wrapper: Types = styled.div`
     width: 100%;
-    height: 6%;
-`;
-
-Wrapper.title = styled.p`
-    margin: 7px 0 0 3px;
-    font-size: 18px;
-    font-weight: bold;
+    height: 774px;
+    background: #FFFFFF;
+    margin-top: 33px;
 `;

@@ -4,16 +4,11 @@ import React, {
 import {
     Wrapper,
 } from './styledComponent';
+import UserInfoPage from '../views/users/pages/userInfoPage';
 
-export interface Props {
-    message?: string;
-}
-
-const App: FC<Props> = ({ message}) => (
+const App: FC = () => (
     <Wrapper>
-        <Wrapper.heading>
-            { message }
-        </Wrapper.heading>
+        <UserInfoPage />
     </Wrapper>
 );
 
