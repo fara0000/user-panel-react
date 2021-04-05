@@ -1,14 +1,18 @@
-import React, {FC} from 'react';
-import { Wrapper } from './styledComponent';
+import React, {
+    FC,
+} from 'react';
+import {
+    Wrapper,
+} from './styledComponent';
 
 export interface Props {
     message?: string;
 }
 
-const App: FC<Props> = ({message}) => (
+const App: FC<Props> = ({ message}) => (
     <Wrapper>
         <Wrapper.heading>
-            {message}
+            { message }
         </Wrapper.heading>
     </Wrapper>
 );
