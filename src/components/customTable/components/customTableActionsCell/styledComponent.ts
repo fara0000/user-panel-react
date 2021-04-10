@@ -7,7 +7,12 @@ interface Types extends StyledComponentBase<any, {}> {
     ToggleWrapper?: any;
 }
 
+export interface Props {
+    width: string;
+}
+
 export const Wrapper: Types = styled.div`
+    width: ${(props: Props) => props.width};
     height: 100%;
     display: flex;
     padding: 14px 1.2%;

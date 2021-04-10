@@ -4,6 +4,6 @@ import App from './app/App';
 import './index.css';
 
 ReactDOM.render(
-    <App message={'Hello World!'}/>,
+    <App />,
     document.getElementById('root')
 );

@@ -7,55 +7,51 @@ import {
     Wrapper,
     EditWrapper,
     DeleteWrapper,
-} from './styledComponents';
+} from './styledComponent';
 import EditButton from '../../../editButton';
 import DeleteButton from '../../../deleteButton';
 
 export interface Props {
-    item: any;
-    style: any;
-    selectItem: any;
-    toggleModal: () => void;
-    toggleDeleteModal: () => void;
+    item?: any;
+    width: string;
+    selectItem?: any;
+    toggleModal?: () => void;
+    toggleDeleteModal?: () => void;
 }
 
 const CustomActionsCell: FC<Props> = props => {
     const {
         item,
-        style,
+        width,
         selectItem,
         toggleModal,
         toggleDeleteModal,
     } = props;
 
-    const editClick = (): void => {
-        selectItem(item);
-        toggleModal();
-    };
-
-    const deleteClick = (): void => {
-        selectItem(item);
-        toggleDeleteModal();
-    };
+    // const editClick = (): void => {
+    //     selectItem(item);
+    //     toggleModal();
+    // };
+    //
+    // const deleteClick = (): void => {
+    //     selectItem(item);
+    //     toggleDeleteModal();
+    // };
 
     return (
         <Wrapper
-            style={style && style?.div}
+            width={width}
             data-at={'custom__table-cell-wrapper'}
         >
             <EditWrapper
                 data-at={'questions-table__edit-wrapper'}
             >
-                <EditButton
-                    editModal={editClick}
-                />
+                <EditButton />
             </EditWrapper>
             <DeleteWrapper
                 data-at={'questions-table__delete-wrapper'}
             >
-                <DeleteButton
-                    deleteModal={deleteClick}
-                />
+                <DeleteButton />
             </DeleteWrapper>
         </Wrapper>
     );

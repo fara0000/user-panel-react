@@ -1,31 +1,25 @@
 import React, {
-FC,
-    memo,
+    FC,
 } from 'react';
 
 import {
     Wrapper,
-} from './styledComponents';
+} from './styledComponent';
 
 export interface Props {
-    style?: any;
-    cellName?: string;
-    cellType?: string;
+    cellName: string;
 }
 
-const CustomTableCell: FC<Props> = props => {
+export const CustomTableCell: FC<Props> = (props) => {
     const {
-        style,
         cellName,
     } = props;
 
     return (
         <Wrapper
-            style={style && style?.div}
             data-at={'custom__table-cell-wrapper'}
         >
             <Wrapper.cellSpan
-                style={style && style.span}
                 data-at={'custom-table-cell-wrapper__cell-span'}
             >
                 {`${cellName}`}
@@ -34,4 +28,4 @@ const CustomTableCell: FC<Props> = props => {
     );
 };
 
-export default memo(CustomTableCell);
+export default CustomTableCell;
