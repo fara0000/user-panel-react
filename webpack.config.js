@@ -23,10 +23,13 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(ts|js)x?$/,
+                test: /\.(ts|js|tsx|jsx)x?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/env', '@babel/react']
+                    }
                 },
             },
             {
@@ -39,7 +42,17 @@ module.exports = {
             {
                 test: /\.(png|j?g|svg|gif)?$/,
                 use: 'file-loader'
-            }
+            },
+            // {
+            //     test: /\.(m?js|jsx|ts|tsx)$/,
+            //     exclude: /(node_modules|bower_components)/,
+            //     use: {
+            //         loader: 'babel-loader',
+            //         options: {
+            //             presets: ['@babel/env', '@babel/react']
+            //         }
+            //     }
+            // }
         ],
     },
     plugins: [

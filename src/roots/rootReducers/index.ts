@@ -1,3 +1,8 @@
 import { combineReducers } from 'redux';
+import userPageReducer from '../../managers/usersPageManager/reducer';
 
-export default combineReducers({});
+const rootReducer = combineReducers({
+    userPageReducer,
+});
+
+export default rootReducer;

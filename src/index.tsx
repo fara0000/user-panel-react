@@ -19,7 +19,7 @@ function initialize() {
 
     sagaMiddleWare.run(rootSagas);
 
-    process.env.NODE_ENV !== 'production' && ((window as any).store = store);
+    ((window as any).store = store);
 
     ReactDOM.render(
         <Provider store={store}>

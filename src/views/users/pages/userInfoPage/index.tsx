@@ -1,15 +1,23 @@
 import React, {
     FC,
     memo,
+    useEffect,
 } from 'react';
 import {
     Wrapper,
 } from './styledComponent';
 import CustomMainHeader from '../../../../components/customMainHeader';
+import * as userPageActions from '../../../../managers/usersPageManager/action';
 import UserInfoCustomTable from './components/userInfoPageTable';
+import { useDispatch } from 'react-redux';
 
 export const UserInfoPage: FC = () => {
-    const userPageTitle = 'User Info Table'
+    const dispatch = useDispatch();
+    const userPageTitle = 'User Info Table';
+
+    useEffect(() => {
+        dispatch(userPageActions.getUserList());
+    }, []);
 
     return (
         <Wrapper

@@ -9,3 +9,31 @@
     "@babel/proposal-object-rest-spread"
   ]
 }
+
+//{
+//  "plugins": [
+//    "@babel/plugin-syntax-typescript",
+//    [
+//      "module-resolver",
+//      {
+//        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+//        "root": ["./src"],
+//        "alias": {
+//          "root": "src",
+//          "src": "src"
+//        }
+//      }
+//    ]
+//  ],
+//  "presets": [
+//    [
+//      "@babel/preset-env", {
+//      "targets": {
+//        "node": "current"
+//      }
+//    }
+//    ],
+//    "@babel/preset-react",
+//    "@babel/preset-typescript"
+//  ]
+//}
