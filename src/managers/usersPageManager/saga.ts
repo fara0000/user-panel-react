@@ -1,19 +1,21 @@
 import {
+    put,
     call,
     takeEvery,
 } from 'redux-saga/effects';
+import { ActionTypes } from './ActionTypes';
 import * as usersPageApi from '../../api/userPageApi/api';
-import { ActionType } from './ActionType';
+import * as usersPageActions from './actions';
 
 export default function* watcherUserPage() {
-    yield takeEvery(ActionType.GET_USER_LIST, workerGetUserList);
+    yield takeEvery(ActionTypes.GET_USER_LIST, workerGetUserList);
 }
 
 export function* workerGetUserList () {
     try {
-        const response = yield call(usersPageApi.getUserList);
+        const usersDataList = yield call(usersPageApi.getUserList);
 
-        console.log(response, 'saga uraaa');
+        yield put(usersPageActions.setUserList(usersDataList));
     } catch (error) {
         console.log('workerGetUserList worker error', error)
     }

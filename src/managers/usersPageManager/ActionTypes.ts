@@ -1,4 +1,5 @@
-export enum ActionType {
+export enum ActionTypes {
     'GET_USER_LIST' = 'GET_USER_LIST',
     'SET_USER_LIST' = 'SET_USER_LIST',
+    'IS_DELETE_MODAL_OPEN' = 'IS_DELETE_MODAL_OPEN',
 }

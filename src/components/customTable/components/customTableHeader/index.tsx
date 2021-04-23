@@ -18,7 +18,7 @@ export const CustomTableHeader: FC<TProps<object>> = (props: any) => {
     let obj: string[] = [];
     const actions = 'actions';
 
-    tableData.find((item: object) => obj = Object.keys(item));
+    tableData?.find((item: object) => obj = Object.keys(item));
 
     console.log(obj, 'obj');
 

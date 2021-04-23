@@ -7,9 +7,9 @@ interface Types extends StyledComponentBase<any, {}> {
 
 export const Wrapper:Types = styled.div`
     width: 100%;
-    height: 6%;
+    height: 9%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 `;
 
 Wrapper.title = styled.p`

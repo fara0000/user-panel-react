@@ -1,0 +1,108 @@
+.text__content__wrapper {
+    height: 72px;
+    font-size: 17px;
+    font-style: normal;
+    line-height: 24px;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.modal__checkbox__wrapper {
+    width: 100%;
+    height: 69px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.delete__checkbox__wrapper {
+    width: 26px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
+}
+
+.delete__checkbox__label {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    display: block;
+    font-size: 22px;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.delete__checkbox__label input {
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+.delete__checkbox__input {
+    width: 16px;
+    height: 16px;
+    background:  #666666;
+    border-radius: 2px;
+}
+
+.delete__checkbox__span {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #5D5D5D;
+    position: absolute;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.delete__checkbox__label:hover input ~ .delete__checkbox__span {
+    background-color: #f1f1f1;
+}
+
+.delete__checkbox__label input:checked ~ .delete__checkbox__span {
+    border: 1px solid #5C59EC;
+    background-color: #fff;
+}
+
+.delete__checkbox__span:after {
+    content: "";
+    display: none;
+    position: absolute;
+}
+
+.delete__checkbox__label input:checked ~ .delete__checkbox__span:after {
+    display: block;
+}
+
+.delete__checkbox__label .delete__checkbox__span:after {
+    top: 2px;
+    left: 4.5px;
+    width: 4px;
+    height: 8px;
+    border: solid #5C59EC;
+    transform: rotate(45deg);
+    border-width: 0 2px 2px 0;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.warning__wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.warning__span {
+    width: 165px;
+    height: 25px;
+    display: flex;
+    font-size: 15px;
+    font-style: normal;
+    line-height: 24px;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+    justify-content: center;
+}

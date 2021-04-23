@@ -6,7 +6,7 @@ import CustomTableBodyRaw from './components/customTableBodyRow';
 
 export interface TProps<T> {
     height: string;
-    tableData: Array<T>;
+    tableData?: Array<T>;
 }
 
 export const CustomTableBody: FC<TProps<object>> = (props) => {
@@ -15,7 +15,7 @@ export const CustomTableBody: FC<TProps<object>> = (props) => {
         tableData,
     } = props;
 
-    const renderBodyCells = tableData.map((item: any) => <CustomTableBodyRaw
+    const renderBodyCells = tableData?.map((item: any) => <CustomTableBodyRaw
         key={item.id}
         item={item}
         height={'10%'}
