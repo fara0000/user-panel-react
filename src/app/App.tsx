@@ -5,10 +5,13 @@ import {
     Wrapper,
 } from './styledComponent';
 import UserInfoPage from '../views/users/pages/userInfoPage';
+import Routers from '../modules/router';
 
 const App: FC = () => (
     <Wrapper>
-        <UserInfoPage />
+        <main>
+            <Routers />
+        </main>
     </Wrapper>
 );
 

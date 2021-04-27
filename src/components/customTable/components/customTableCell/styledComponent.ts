@@ -6,7 +6,7 @@ interface Types extends StyledComponentBase<any, {}> {
 }
 
 export const Wrapper: Types = styled.div`
-  width: 20%;
+  width: 76%;
   height: 90%;
   display: flex;
   padding: 14px 1.6% 14px 24px;

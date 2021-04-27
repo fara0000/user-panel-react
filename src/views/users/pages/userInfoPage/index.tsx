@@ -5,7 +5,10 @@ import React, {
 } from 'react';
 import {
     Wrapper,
+    IconWrapper,
+    TitleContainer,
     HeaderContainer,
+    PostButtonContainer,
 } from './styledComponent';
 import CustomMainHeader from '../../../../components/customMainHeader';
 import * as userPageActions from '../../../../managers/usersPageManager/actions';
@@ -16,7 +19,8 @@ import {
     useSelector,
     shallowEqual,
 } from 'react-redux';
-import DeleteModal from "../../../../components/modals/deleteModal";
+import DeleteModal from '../../../../components/modals/deleteModal';
+import FolderIcon from '../../../../assets/svg/folderIcon/FolderIcon';
 
 export const UserInfoPage: FC = () => {
     const dispatch = useDispatch();
@@ -26,6 +30,10 @@ export const UserInfoPage: FC = () => {
     useEffect(() => {
         dispatch(userPageActions.getUserList());
     }, []);
+
+    const redirectToPostPage = (): void => {
+        dispatch(userPageActions.RedirectToPostPage());
+    }
 
     // const toggleDeleteModal = (): void => {
     //     dispatch(userPageActions.isDeleteModalOpen());
@@ -42,7 +50,18 @@ export const UserInfoPage: FC = () => {
                     title={userPageTitle}
                     data-at={'user-info-page__header-container__main-header'}
                 />
-
+                <PostButtonContainer
+                    onClick={redirectToPostPage}
+                >
+                    <IconWrapper>
+                        <FolderIcon />
+                    </IconWrapper>
+                    <TitleContainer>
+                        <TitleContainer.title>
+                            {'Archive'}
+                        </TitleContainer.title>
+                    </TitleContainer>
+                </PostButtonContainer>
             </HeaderContainer>
             <UserInfoCustomTable
                 data-at={'user-info-page__body'}

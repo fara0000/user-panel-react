@@ -11,6 +11,9 @@ export type setUserListType = {
 export type isDeleteModalOpenType = {
     type: ActionTypes.IS_DELETE_MODAL_OPEN;
 };
+export type RedirectToPostPageType = {
+    type: ActionTypes.REDIRECT_TO_POST_PAGE;
+};
 
 export const getUserList = (): getUserListType => ({
     type: ActionTypes.GET_USER_LIST,
@@ -21,4 +24,7 @@ export const setUserList = (data: Array<userPageTypes.userType>): setUserListTyp
 })
 export const isDeleteModalOpen = (): isDeleteModalOpenType => ({
     type: ActionTypes.IS_DELETE_MODAL_OPEN,
+})
+export const RedirectToPostPage = (): RedirectToPostPageType => ({
+    type: ActionTypes.REDIRECT_TO_POST_PAGE,
 })
